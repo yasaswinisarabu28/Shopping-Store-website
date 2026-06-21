@@ -26,7 +26,7 @@ container.appendChild(clone);
 const buttons=document.querySelectorAll(".category-btn");
 buttons.forEach(button=>{
 button.addEventListener("click",async()=>{
-let category=button.textContent.toLowerCase();
+let category=button.textContent.toLowerCase().replaceAll(" ", "-");;
 const banner = document.getElementById("banner");
 
 if(category==="home"){
