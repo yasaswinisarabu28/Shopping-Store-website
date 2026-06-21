@@ -1,0 +1,141 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+    background:white;
+}
+header{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#0f2d63;
+    color:white;
+    margin-bottom:30px;
+}
+.name{
+    font-size:2rem;
+    font-weight:bold;
+    white-space:nowrap;
+}
+.search{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:300px;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    outline:none;
+}
+.profile{
+    border-radius:50%;
+    padding:10px;
+    background:#e8cfcf;
+    border:none;
+    cursor:pointer;
+}
+#banner{
+    display:block;
+    width:100%;
+    max-width:1400px;
+    height:auto;
+    margin:auto;
+    border-radius:15px;
+}
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    padding:15px;
+    background:white;
+    margin-bottom:20px;
+}
+.category-btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    background:#0f2d63;
+    color:white;
+    transition:0.3s;
+}
+.category-btn:hover{
+    background:#e8cfcf;
+    color:#0f2d63;
+}
+#container{
+    display:none;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    background:#eef2f8;
+    padding:30px;
+}
+.card{
+    display:flex;
+    width:500px;
+    border:none;
+    border-radius:15px;
+    padding:25px;
+    gap:20px;
+    align-items:center;
+    background:white;
+    box-shadow:0px 6px 20px rgba(15,45,99,0.15);
+    margin-bottom:30px;
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
+    background:#fdf7f7;
+    box-shadow:0px 10px 25px rgba(15,45,99,0.25);
+}
+.image1{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+}
+.smallcard{
+    flex:1;
+}
+.title{
+    margin:0;
+    font-size:22px;
+    color:#0f2d63;
+}
+.description{
+    color:#666;
+    margin:10px 0;
+}
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:#0f2d63;
+}
+@media(max-width:1100px){
+    .card{
+        flex-direction:column;
+        width:300px;
+        height:auto;
+    }
+.smallcard{
+        width:200px;
+        padding:0;
+    }
+    header{
+        flex-direction:column;
+        padding-bottom:50px;
+    }
+    .search{
+        margin-top:90px;
+        width:250px;}
+    .profile{
+        margin-top:50px;
+}
+#banner{
+    border-radius:0;
+    }
+}
