@@ -36,7 +36,14 @@ if(category==="home"){
 }
 banner.style.display="none";
 container.style.display="grid";
-let response=await fetch(`https://dummyjson.com/products/category/${category}`);
+let response;
+
+if(category==="all"){
+    response=await fetch("https://dummyjson.com/products?limit=0");
+}
+else{
+    response=await fetch(`https://dummyjson.com/products/category/${category}`);
+}
 let data=await response.json();
 container.innerHTML="";
 
